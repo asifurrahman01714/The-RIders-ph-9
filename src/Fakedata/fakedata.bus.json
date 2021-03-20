@@ -1,0 +1,16 @@
+[{
+    "id": 1,
+    "name": "bus1",
+    "img": "https://i.ibb.co/CQWt2D0/bus.png",
+    "price": "$70"
+  }, {
+    "id": 2,
+    "name": "bus2",
+    "img": "https://i.ibb.co/CQWt2D0/bus.png",
+    "price": "$80"
+  },{
+    "id": 3,
+    "name": "bus3",
+    "img": "https://i.ibb.co/CQWt2D0/bus.png",
+    "price": "$90"
+  }]

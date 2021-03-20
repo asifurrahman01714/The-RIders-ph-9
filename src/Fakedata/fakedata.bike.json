@@ -1,16 +1,16 @@
 [{
     "id": 1,
-    "name": "bike",
+    "name": "bike1",
     "img": "https://i.ibb.co/sHLDnP6/bike.png",
     "price": "$70"
   }, {
     "id": 2,
-    "name": "bike",
-    "img": "https://www.cricbuzz.com/a/img/v1/152x152/i1/c170912/shakib-al-hasan.jpg",
+    "name": "bike2",
+    "img": "https://i.ibb.co/sHLDnP6/bike.png",
     "price": "$80"
   },{
     "id": 3,
-    "name": "bike",
-    "img": "https://www.cricbuzz.com/a/img/v1/152x152/i1/c170912/shakib-al-hasan.jpg",
+    "name": "bike3",
+    "img": "https://i.ibb.co/sHLDnP6/bike.png",
     "price": "$90"
   }]

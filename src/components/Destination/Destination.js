@@ -1,35 +1,77 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import bikeFakedata from '../../Fakedata/fakedata.bike.json';
+import busFakedata from '../../Fakedata/fakedata.bus.json';
+import trainFakedata from '../../Fakedata/fakedata.train.json';
+import carFakedata from '../../Fakedata/fakedata.car.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee, faUsers } from '@fortawesome/free-solid-svg-icons';
+
 const Destination = () => {
     let {destinationType} = useParams();
     const [destination, setDestination] = useState([]);
 
     useEffect(() =>{
-        setDestination(bikeFakedata);
-        console.log(bikeFakedata);
+        
+        if (destinationType === 'bike') {
+            setDestination(bikeFakedata);
+        }else if (destinationType === 'bus') {
+            setDestination(busFakedata);
+        }else if (destinationType === 'car') {
+            setDestination(carFakedata);
+        }else if(destinationType === 'train') {
+            setDestination(trainFakedata);
+        }
+        // console.log(bikeFakedata);
 
     },[]);
-
+    const [from, setFrom] = useState('');
+    const [to, setTo] = useState('');
+    let pickFrom;
+    let pickTo;
     const handleBlur = (e) =>{
         const values = e.target.value;
         const name = e.target.name;
         
         if(name === 'from'){
-          const pickFrom = values;
+          pickFrom = values;
           console.log(pickFrom);
+          setFrom(pickFrom);
         }
     
         if(name === 'to'){
-            const pickTo = values;
+            pickTo = values;
             console.log(pickTo);
+            setTo(pickTo);
         }
+        
+        
+        
     };
- 
-    const handleSubmit =() =>{
-        console.log('submit clicked');
+    console.log(from);
+    console.log(to);
+
+
+    const [style, setStyle] = useState(false);
+    let formStyle1;
+    let formStyle2;
+    if (style) {
+        formStyle1 = {
+            display: 'none'
+        };
+
+        formStyle2 = {
+            display: 'block'
+        };
+    } else {
+        formStyle1 = {
+            display: 'block'
+        };
+        formStyle2 = {
+            display: 'none'
+        };
     }
-    console.log(destination);
+    console.log(destination[0]);
     return (
         <div className="container">
             <div className="row mb-5">
@@ -39,13 +81,38 @@ const Destination = () => {
             </div>
             <div className="row">
                 <div className="col-md-4">
-                    <form action="" >
+                    {/* <p>Form style: {style.toString()}</p> */}
+                    <form action="" style={formStyle1}>
                         <label for="from">Pick From</label><br/>
                         <input type="text" id="from" name="from" className="form-control" onBlur={handleBlur}/><br/>
                         <label for="to">Pick To</label><br/>
                         <input type="text" id="to" name="to" className="form-control" onBlur={handleBlur}/><br/>
-                        <input type="button" onClick={handleSubmit} value="Search" className="btn-danger mt-3 form-control"/>
+                        <input type="button" onClick={() => setStyle(!style)} value="Search" className="btn-danger mt-3 form-control"/>
                     </form>
+
+                    <div className="container bg-secondary pt-3 rounded shadow" style={formStyle2}>
+                        <div  style={{height:'100px'}} className=" bg-danger text-white p-3 align-items-center rounded shadow">
+                            <h3>From : {from} </h3>
+                            <h3>To {''}: {to}</h3>
+                        </div>
+                        <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
+                            <div className="col-md-4"><img src={destination && destination[0]?.img} className="w-50" alt=""/></div>
+                            <div className="col-md-4">{destination && destination[0]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2' />2</div>
+                            <div className="col-md-4">{destination && destination[0]?.price}</div>
+                        </div>
+
+                        <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
+                            <div className="col-md-4"><img src={destination && destination[1]?.img} className="w-50" alt=""/></div>
+                            <div className="col-md-4">{destination && destination[1]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2'/>3</div>
+                            <div className="col-md-4">{destination && destination[1]?.price}</div>
+                        </div>
+
+                        <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
+                            <div className="col-md-4"><img src={destination && destination[2]?.img} className="w-50" alt=""/></div>
+                            <div className="col-md-4">{destination && destination[2]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2'/>4</div>
+                            <div className="col-md-4">{destination && destination[2]?.price}</div>
+                        </div>
+                    </div>
 
                 </div>
                 <div className="col-md-8">

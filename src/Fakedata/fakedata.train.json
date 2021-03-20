@@ -1,0 +1,16 @@
+[{
+    "id": 1,
+    "name": "train1",
+    "img": "https://i.ibb.co/R6FH8WL/train.png",
+    "price": "$70"
+  }, {
+    "id": 2,
+    "name": "train2",
+    "img": "https://i.ibb.co/R6FH8WL/train.png",
+    "price": "$80"
+  },{
+    "id": 3,
+    "name": "train3",
+    "img": "https://i.ibb.co/R6FH8WL/train.png",
+    "price": "$90"
+  }]
