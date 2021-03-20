@@ -1,0 +1,12 @@
+.home{
+    background-image:url(../../images/Bg.png);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size: cover;
+    height:100vh;
+    padding-top: 20vh;
+}
+.img-style{
+    width:70%!important;
+    padding-top: 40px;
+}
