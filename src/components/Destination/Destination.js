@@ -92,31 +92,31 @@ const Destination = () => {
 
                     <div className="container bg-secondary pt-3 rounded shadow" style={formStyle2}>
                         <div  style={{height:'100px'}} className=" bg-danger text-white p-3 align-items-center rounded shadow">
-                            <h3>From : {from} </h3>
-                            <h3>To {''}: {to}</h3>
+                            <h5>From : {from} </h5>
+                            <h5>To {''}: {to}</h5>
                         </div>
                         <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
-                            <div className="col-md-4"><img src={destination && destination[0]?.img} className="w-50" alt=""/></div>
-                            <div className="col-md-4">{destination && destination[0]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2' />2</div>
-                            <div className="col-md-4">{destination && destination[0]?.price}</div>
-                        </div>
-
-                        <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
-                            <div className="col-md-4"><img src={destination && destination[1]?.img} className="w-50" alt=""/></div>
-                            <div className="col-md-4">{destination && destination[1]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2'/>3</div>
-                            <div className="col-md-4">{destination && destination[1]?.price}</div>
+                            <div className="col-4"><img src={destination && destination[0]?.img} className="w-50" alt=""/></div>
+                            <div className="col-6">{destination && destination[0]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2' />2</div>
+                            <div className="col-2">{destination && destination[0]?.price}</div>
                         </div>
 
                         <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
-                            <div className="col-md-4"><img src={destination && destination[2]?.img} className="w-50" alt=""/></div>
-                            <div className="col-md-4">{destination && destination[2]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2'/>4</div>
-                            <div className="col-md-4">{destination && destination[2]?.price}</div>
+                            <div className="col-4"><img src={destination && destination[1]?.img} className="w-50" alt=""/></div>
+                            <div className="col-6">{destination && destination[1]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2'/>3</div>
+                            <div className="col-2">{destination && destination[1]?.price}</div>
+                        </div>
+
+                        <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
+                            <div className="col-4"><img src={destination && destination[2]?.img} className="w-50" alt=""/></div>
+                            <div className="col-6">{destination && destination[2]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2'/>4</div>
+                            <div className="col-2">{destination && destination[2]?.price}</div>
                         </div>
                     </div>
 
                 </div>
-                <div className="col-md-8">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d120862.51011560642!2d89.24272567641832!3d23.117918670627915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d23.1169649!2d89.3170018!5e0!3m2!1sen!2sbd!4v1594361862611!5m2!1sen!2sbd" className="Map" width="550" height="300" frameborder="0" style={{border:'0'}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                <div className="col-md-8 mt-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d120862.51011560642!2d89.24272567641832!3d23.117918670627915!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e0!4m0!4m3!3m2!1d23.1169649!2d89.3170018!5e0!3m2!1sen!2sbd!4v1594361862611!5m2!1sen!2sbd" className="Map" width="100%" height="100%" frameborder="0" style={{border:'0'}} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
         </div>
