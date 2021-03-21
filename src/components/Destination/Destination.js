@@ -95,19 +95,19 @@ const Destination = () => {
                             <h5>From : {from} </h5>
                             <h5>To {''}: {to}</h5>
                         </div>
-                        <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
-                            <div className="col-4"><img src={destination && destination[0]?.img} className="w-50" alt=""/></div>
+                        <div className="row bg-light mt-3 pb-2 align-items-center" style={{height:'60px'}}>
+                            <div className="col-4"><img src={destination && destination[0]?.img} className="w-50 " alt=""/></div>
                             <div className="col-6">{destination && destination[0]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2' />2</div>
                             <div className="col-2">{destination && destination[0]?.price}</div>
                         </div>
 
-                        <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
+                        <div className="row bg-light mt-3 pb-2  align-items-center" style={{height:'60px'}}>
                             <div className="col-4"><img src={destination && destination[1]?.img} className="w-50" alt=""/></div>
                             <div className="col-6">{destination && destination[1]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2'/>3</div>
                             <div className="col-2">{destination && destination[1]?.price}</div>
                         </div>
 
-                        <div className="row bg-light mt-3 align-items-center" style={{height:'50px'}}>
+                        <div className="row bg-light mt-3 pb-2 align-items-center" style={{height:'60px'}}>
                             <div className="col-4"><img src={destination && destination[2]?.img} className="w-50" alt=""/></div>
                             <div className="col-6">{destination && destination[2]?.name}<FontAwesomeIcon icon={faUsers} className='ml-2 mr-2'/>4</div>
                             <div className="col-2">{destination && destination[2]?.price}</div>
